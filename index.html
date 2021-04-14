@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+<div class="frame">
+  <div class="card active">
+		<div class="number-bg"></div>
+		<div class="number">1</div>
+		<div class="text">
+			<span class="headline">The couch</span>
+			<p>If you want to grow, get outside<br> your comfort zone.</p>
+		</div>
+		<div class="button">Ok</div>	
+  </div>
+	<div class="card">
+		<div class="number-bg"></div>
+		<div class="number">2</div>
+		<div class="text">
+			<span class="headline">Failing is learning</span>
+			<p>Pick yourself up, dust yourself off,<br> and start again.</p>
+		</div>
+		<div class="button">Ok</div>	
+  </div>
+	<div class="card">
+		<div class="number-bg"></div>
+		<div class="number">3</div>
+		<div class="text">
+			<span class="headline">Flowers and rainbows</span>
+			<p>Always be yourself,<br> unless you can be a unicorn.</p>
+		</div>
+		<div class="button">Ok</div>	
+  </div>
+</div>
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+<script src="https://100dayscss.com/codepen/js/jquery.min.js"></script>
+
+<script id="rendered-js">
+var active = 1;
+$('.button').bind('click', function () {
+  $('.card:nth-child(' + active + ')').removeClass('active').addClass('inactive');
+  if (active == 3) {
+    active = 0;
+  }
+  active++;
+  $('.card:nth-child(' + active + ')').removeClass('inactive').addClass('active');
+});
+//# sourceURL=pen.js
+    </script>
+
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+  
+  
+</body>
+</html>
